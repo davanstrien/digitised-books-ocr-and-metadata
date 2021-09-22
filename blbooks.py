@@ -28,9 +28,9 @@ British Library books dataset
 TODO
 """
 _URLs = {
-    "1550": "https://transfer.sh/1reSmss/1550.tar.bz2",
-    "1570": "https://transfer.sh/1YcjXq4/1570.tar.bz2",
-    "1520": "https://transfer.sh/1UlQu3r/1520.tar.bz2",
+    "1550": "https://transfer.sh/get/1reSmss/1550.tar.bz2",
+    "1570": "https://transfer.sh/get/1YcjXq4/1570.tar.bz2",
+    "1520": "https://transfer.sh/get/1UlQu3r/1520.tar.bz2",
 }
 
 # class BritishLibaryBooksConfig(datasets.BuilderConfig):
@@ -54,7 +54,7 @@ class BritishLibraryBooksConfig(datasets.BuilderConfig):
 
 
 class BritishLibraryBooks(datasets.GeneratorBasedBuilder):
-    """Allocine Dataset: A Large-Scale French Movie Reviews Dataset."""
+    """TODO"""
 
     BUILDER_CONFIG_CLASS = BritishLibraryBooksConfig
     _BASE_DIR = "blbooks"
@@ -64,7 +64,7 @@ class BritishLibraryBooks(datasets.GeneratorBasedBuilder):
         BritishLibraryBooksConfig(
             name="default",
             version=datasets.Version("1.0.0"),
-            description="Allocine Dataset: A Large-Scale French Movie Reviews Dataset",
+            description="TODO",
             skip_empty=False,
             min_ocr_confidence=False,
         ),
