@@ -1,4 +1,22 @@
-# bl_books_datasets
+# BL Books ALTO to JSONL + metadata processing notebooks
+
+## What?
+
+> 49,455 books were digitised with funding from Microsoft, equating to 65,227 volumes (over 23 million pages), published largely between the 18th and 19th Century. The books cover a wide range of subject areas including philosophy, history, poetry and literature. 
+
+As part of this project Optical Chracter Recogniton (OCR) was applied to the collections. This produces 'machine readable' text from the images of the pages. 
+
+The OCR from these books have been available via `data.bl.uk` in two formats:
+- Analysed Layout and Text Object (ALTO) Extensible Markup Language (XML) format.
+- As a set of JavaScript Object Notation (JSON) files.
+ 
+This repository contains notebooks which transform the ALTO version of these files into newline delimited JSON (described more below) and updates and adds new metadata exported from the British Library catalogue. 
+
+## Why?
+
+
+## How?
+
 
 ## Data structure
 
