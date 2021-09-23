@@ -26,21 +26,21 @@ In particular, this new dataset aims to make it practical for researchers with r
 The processing takes place in the following notebooks: 
 
 
-## Data structure
+## Data documentation 
 
-- what?
+The collection is broken down into different subcollections based on the year in which the item was published. If the year is unkown for an item then it will be stored under 'unknown'. 
 
-Organization of data.
+Inside each subcollection directory are the files which contains the digitised books. Each file represents one resource (usually a book) from the collection. For example `1634_003194022.jsonl.gz` represents one item. 
 
-Each file contains is one resource (usually a book) from the collection. Each line of the `jsonl` file represents a page in the book (more on this format below).
+Each line of the `jsonl` file represents a page in the book (more on this format below).
 
 ### File naming
 
-The file naming is structured as follows 
+The file naming is structured as follows:
 
-- `{year}_{ID}.jsonl`
+ `{year}_{ID}.jsonl`
 
-If the year is unkown, this will be `unkown`
+If the year is unknown, year will be `unknown` instead of a number. 
 
 
 ### Data format
@@ -56,7 +56,9 @@ This format contains json objects delimited by a new line. Such as
 ```
 
 
-This format can be useful for working with large amounts of data because it allows for reading data in a streaming manner one line at a time. This means that even very large datasets (i.e. multiple GBs) can be processed with "normal" amounts of memory.  
+This format can be useful for working with large amounts of data because it allows for reading data in a streaming manner one line at a time. This means that even very large datasets (i.e. multiple GBs) can be processed with "normal" amounts of memory. This format can also be loaded easily by many common Python Libraries, for example Pandas. 
+
+Each line of JSON has a number of keys and values. The keys are the same across all of the files but the values may not always b present, in this case the value will be `null`.
 
 The fields included in this dataset are:
 
@@ -82,7 +84,7 @@ The fields included in this dataset are:
 - "Language_4": The fourth language associated with the book/item
 - "multi_language": if the book contains multiple languages i.e. `True` or `False`
 
-An example of one row i.e. one page: 
+An example of one row i.e. one page loaded as a Python Dictionary:
 
 ```python
 {'record_id': '003898176',
@@ -109,9 +111,10 @@ An example of one row i.e. one page:
 ```
 
 ##### Compression
+
 The data is compressed at two levels:
 - the folder level i.e. each folder containing a group of dates is compressed 
 - the file level i.e. each `jsonl` file containing a book from the dataset is compressed
 
-Both of these levels of compression use the `gzip` format to compress the data. The gzip compression format can be used directly by some processing software so it won't always be necessary to fully decompress the data for working with it. For example, it is possible for the `Pandas` Python library to read `gzip` compressed files directly. This can be useful for saving space for storing files and can improve performance in some situations since less I/O is required to process each file. 
+Both of these levels of compression use the `gzip` format to compress the data. The gzip compression format can be used directly by some processing software so it won't always be necessary to fully decompress the data for working with it. For example, it is possible for the `pandas` Python library to read `gzip` compressed files directly. This can be useful for saving space for storing files and can improve performance in some situations since less I/O is required to process each file. 
 
