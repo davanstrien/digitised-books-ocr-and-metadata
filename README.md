@@ -25,6 +25,9 @@ In particular, this new dataset aims to make it practical for researchers with r
 ## How?
 The processing takes place in the following notebooks: 
 
+- [00_download_process_alto.ipynb]()
+- [01_metadata_exploration.ipynb]()
+- [02_update_metadata.ipynb]()
 
 ## Data documentation 
 
