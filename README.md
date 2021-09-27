@@ -23,11 +23,11 @@ The JSON file current available via data.bl are easier to work with but contain 
 In particular, this new dataset aims to make it practical for researchers with relatively limited computational resources to be still able to work with the complete collection of resources. This repository is shared to show the processing steps so others can see the lineage of this new dataset and to allow others to check for errors in the processing steps and/or process the collections differently to match their requirements. 
 
 ## How?
-The processing takes place in the following notebooks: 
+The processing takes place in a series of notebook: 
 
-- [00_download_process_alto.ipynb]()
-- [01_metadata_exploration.ipynb]()
-- [02_update_metadata.ipynb]()
+- [00_download_process_alto.ipynb]() covers the process of downloading and parsing text and some metadata from the the ALTO XML files and creating the initial JSONL version of the dataset. 
+- [01_metadata_exploration.ipynb]() explores metadata available for these books from the British Library catalogue and identifies metadata fields to add/update in the JSONL dataset
+- [02_update_metadata.ipynb]() does the actual update of the existing metadata and prepares the dataset for upload to the British Library repository. 
 
 ## Data documentation 
 
