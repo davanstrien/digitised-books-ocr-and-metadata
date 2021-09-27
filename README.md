@@ -1,6 +1,6 @@
-# BL Books ALTO to JSONL + metadata processing notebooks
+# British Library Books: ALTO to JSONL + metadata processing notebooks
 
-## What?
+## What is this repository 
 
 > 49,455 books (and other resources ) were digitised with funding from Microsoft, equating to 65,227 volumes (over 23 million pages), published largely between the 18th and 19th Century. The books cover a wide range of subject areas including philosophy, history, poetry and literature. 
 
@@ -12,7 +12,7 @@ The OCR from these books have been available via `data.bl.uk` in two formats:
  
 This repository contains notebooks that transform the ALTO version into newline delimited JSON (described more below) and updates and adds new metadata exported from the British Library catalogue. 
 
-## Why?
+## Why create this new version of the dataset? 
 
 The original format output by the OCR software is ALTO XML. Whilst this format works well for many applications, it is less suitable for some types of work with this kind of data. For example, the ALTO XML contains coordinates for words. Whilst this information is helpful for some applications, it's isn't necessary for all potential users of the BL books dataset. 
 
@@ -22,7 +22,7 @@ The JSON file current available via data.bl are easier to work with but contain 
 
 In particular, this new dataset aims to make it practical for researchers with relatively limited computational resources to be still able to work with the complete collection of resources. This repository is shared to show the processing steps so others can see the lineage of this new dataset and to allow others to check for errors in the processing steps and/or process the collections differently to match their requirements. 
 
-## How?
+## How was the dataset created?
 The processing takes place in a series of notebook: 
 
 - [00_download_process_alto.ipynb]() covers the process of downloading and parsing text and some metadata from the the ALTO XML files and creating the initial JSONL version of the dataset. 
