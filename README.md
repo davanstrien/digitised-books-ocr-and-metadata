@@ -110,7 +110,7 @@ An example of one row i.e. one page loaded as a Python Dictionary:
  'multi_language': False}
 ```
 
-##### Compression
+#### Compression
 
 The data is compressed at two levels:
 - the folder level i.e. each folder containing a group of dates is compressed 
