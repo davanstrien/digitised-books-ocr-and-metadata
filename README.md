@@ -1,6 +1,6 @@
 # British Library Books: ALTO to JSONL + metadata processing notebooks
 
-## What is this repository 
+## What is this repository?
 
 > 49,455 books (and other resources ) were digitised with funding from Microsoft, equating to 65,227 volumes (over 23 million pages), published largely between the 18th and 19th Century. The books cover a wide range of subject areas including philosophy, history, poetry and literature. 
 
@@ -28,6 +28,7 @@ The processing takes place in a series of notebook:
 - [00_download_process_alto.ipynb]() covers the process of downloading and parsing text and some metadata from the the ALTO XML files and creating the initial JSONL version of the dataset. 
 - [01_metadata_exploration.ipynb]() explores metadata available for these books from the British Library catalogue and identifies metadata fields to add/update in the JSONL dataset
 - [02_update_metadata.ipynb]() does the actual update of the existing metadata and prepares the dataset for upload to the British Library repository. 
+
 
 ## Data documentation 
 
