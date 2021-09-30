@@ -11,7 +11,7 @@ The OCR from these books have been available via [data.bl.uk](https://data.bl.uk
 - As a set of [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON) (JSON) files.
  
 This repository contains two things:
-Notebooks transform the ALTO version into newline delimited JSON (described more below) and update and add new metadata exported from the British Library catalogue. 
+- Notebooks transform the ALTO version into newline delimited JSON (described more below) and update and add new metadata exported from the British Library catalogue. 
 - documentation for this new dataset. 
 
 Since you might not be interested in the process of creating the dataset, we start with the data documentation. 
