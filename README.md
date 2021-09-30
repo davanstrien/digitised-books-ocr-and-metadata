@@ -10,25 +10,11 @@ The OCR from these books have been available via `data.bl.uk` in two formats:
 - Analysed Layout and Text Object (ALTO) Extensible Markup Language (XML) format.
 - As a set of JavaScript Object Notation (JSON) files.
  
-This repository contains notebooks that transform the ALTO version into newline delimited JSON (described more below) and updates and adds new metadata exported from the British Library catalogue. 
+This repository contains two things:
+- notebooks that transform the ALTO version into newline delimited JSON (described more below) and updates and adds new metadata exported from the British Library catalogue. 
+- documentation for this new dataset. 
 
-## Why create this new version of the dataset? 
-
-The original format output by the OCR software is ALTO XML. Whilst this format works well for many applications, it is less suitable for some types of work with this kind of data. For example, the ALTO XML contains coordinates for words. Whilst this information is helpful for some applications, it's isn't necessary for all potential users of the BL books dataset. 
-
-The ALTO format can be less suitable for work that seeks to utilise this collection 'at scale,' i.e. work with large proportions or all of this data. Similarly, the data in the ALTO is less suitable for using this collection for data science and Natural Langage Processing work.
-
-The JSON file current available via data.bl are easier to work with but contain much less metadata than the ALTO XML. The processing notebooks here aim to produce a new version of the BL books dataset that compromises the usability and completeness of the data. 
-
-In particular, this new dataset aims to make it practical for researchers with relatively limited computational resources to be still able to work with the complete collection of resources. This repository is shared to show the processing steps so others can see the lineage of this new dataset and to allow others to check for errors in the processing steps and/or process the collections differently to match their requirements. 
-
-## How was the dataset created?
-The processing takes place in a series of notebook: 
-
-- [00_download_process_alto.ipynb]() covers the process of downloading and parsing text and some metadata from the the ALTO XML files and creating the initial JSONL version of the dataset. 
-- [01_metadata_exploration.ipynb]() explores metadata available for these books from the British Library catalogue and identifies metadata fields to add/update in the JSONL dataset
-- [02_update_metadata.ipynb]() does the actual update of the existing metadata and prepares the dataset for upload to the British Library repository. 
-
+Since you might not be interested in the process of creating the dataset we start with the data documentation 
 
 ## Data documentation 
 
@@ -121,4 +107,30 @@ The data is compressed at two levels:
 - the file level i.e. each `jsonl` file containing a book from the dataset is compressed
 
 Both of these levels of compression use the `gzip` format to compress the data. The gzip compression format can be used directly by some processing software so it won't always be necessary to fully decompress the data for working with it. For example, it is possible for the `pandas` Python library to read `gzip` compressed files directly. This can be useful for saving space for storing files and can improve performance in some situations since less I/O is required to process each file. 
+
+---
+
+# Background information 
+
+This section contains more background infromation on how and why this new version of the data was created.
+
+## Why create this new version of the dataset? 
+
+The original format output by the OCR software is ALTO XML. Whilst this format works well for many applications, it is less suitable for some types of work with this kind of data. For example, the ALTO XML contains coordinates for words. Whilst this information is helpful for some applications, it's isn't necessary for all potential users of the BL books dataset. 
+
+The ALTO format can be less suitable for work that seeks to utilise this collection 'at scale,' i.e. work with large proportions or all of this data. Similarly, the data in the ALTO is less suitable for using this collection for data science and Natural Langage Processing work.
+
+The JSON file current available via data.bl are easier to work with but contain much less metadata than the ALTO XML. The processing notebooks here aim to produce a new version of the BL books dataset that compromises the usability and completeness of the data. 
+
+In particular, this new dataset aims to make it practical for researchers with relatively limited computational resources to be still able to work with the complete collection of resources. This repository is shared to show the processing steps so others can see the lineage of this new dataset and to allow others to check for errors in the processing steps and/or process the collections differently to match their requirements. 
+
+## How was the dataset created?
+The processing takes place in a series of notebook: 
+
+- [00_download_process_alto.ipynb]() covers the process of downloading and parsing text and some metadata from the the ALTO XML files and creating the initial JSONL version of the dataset. 
+- [01_metadata_exploration.ipynb]() explores metadata available for these books from the British Library catalogue and identifies metadata fields to add/update in the JSONL dataset
+- [02_update_metadata.ipynb]() does the actual update of the existing metadata and prepares the dataset for upload to the British Library repository. 
+
+
+
 
