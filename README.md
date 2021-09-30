@@ -1,8 +1,11 @@
 # Digitised Books c. 1510 - c. 1900 : JSONL (OCR derived text & metadata)
 
-> 49,455 books (and other resources ) were digitised with funding from Microsoft, equating to 65,227 volumes (over 23 million pages), published largely between the 18th and 19th Century. The books cover a wide range of subject areas including philosophy, history, poetry and literature. 
+<img align="left" src="https://user-images.githubusercontent.com/8995957/135487545-fa1508a8-6408-45a5-97fd-4234ca034c8b.jpg">
 
-As part of this project, Optical Character Recognition (OCR) was applied to the collection. OCR produces 'machine readable' text from the images of the pages. 
+> In partnership with Microsoft, the British Library has digitised, and made freely available under Public Domain Mark, over 60,000 volumes (around 25 million pages) of out of copyright 18th & 19th century texts. Items within this collection cover a wide range of subject areas including geography, philosophy, history, poetry and literature and are published in a variety of languages.  - [source](https://www.bl.uk/collection-guides/digitised-printed-books)
+
+
+As part of this process, Optical Character Recognition (OCR) was applied to the collection. OCR produces 'machine readable' text from the images of the pages. 
 
 The OCR from these books have been available via `data.bl.uk` in two formats:
 - Analysed Layout and Text Object (ALTO) Extensible Markup Language (XML) format.
@@ -128,3 +131,8 @@ The processing takes place in a series of notebook:
 - [00_download_process_alto.ipynb]() covers the process of downloading and parsing text and some metadata from the the ALTO XML files and creating the initial JSONL version of the dataset. 
 - [01_metadata_exploration.ipynb]() explores metadata available for these books from the British Library catalogue and identifies metadata fields to add/update in the JSONL dataset
 - [02_update_metadata.ipynb]() does the actual update of the existing metadata and prepares the dataset for upload to the British Library repository. 
+
+
+
+---
+Image source: [flickr](https://flic.kr/p/i18QFb) 
