@@ -56,7 +56,7 @@ This format contains `JSON` objects delimited by a new line. Such as
 {Animal: "dog", "noise": "woof"}
 ```
 
-This format can help work with large amounts of data because it allows for reading data in a streaming manner, one line at a time. Reading text one line at a time means that you can process even large datasets (i.e. multiple GBs)  with "normal" amounts of memory. This format can also be loaded easily by many standard software libraries, which researchers commonly use, for example, the Python library pandas. 
+This format can help work with large amounts of data because it allows for reading data in a streaming manner, one line at a time. Reading text one line at a time means that you can process even large datasets (i.e. multiple GBs)  with "normal" amounts of memory. This format can also be loaded easily by many standard software libraries, which researchers commonly use, for example, the [Python](https://www.python.org/) library [pandas](pandas.pydata.org/). 
 
 Each line of `JSON` has several keys and values. The keys are the same across all files, but the values may not always be present. In this case, the value will be `null`.
 
@@ -84,7 +84,7 @@ The fields included in this dataset are:
 - "Language_4": The fourth language associated with the book/item
 - "multi_language": if the book contains multiple languages, i.e. `True` or `False`.
 
-An example of one row, i.e. one page loaded as a Python Dictionary:
+An example of one row, i.e. one page loaded as a [Python](https://www.python.org/) [dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries):
 
 ```python
 {'record_id': '003898176',
@@ -116,7 +116,7 @@ The data has been compressed at two levels:
 - the folder level, i.e. each folder containing a group of dates, is compressed 
 - the file level, i.e. each `jsonl` file containing a book from the dataset is compressed
 
-Both of these levels of compression use the `gzip` format to compress the data. Some processing software can use the gzip compression format directly, so it won't always be necessary to decompress the data entirely to work with it. For example, the `pandas` Python library can read `gzip` compressed files directly. Keeping the files compressed saves space for storing files and improves performance in some situations since less I/O is required to process each file. 
+Both of these levels of compression use the [gzip](https://en.wikipedia.org/wiki/Gzip) format to compress the data. Some processing software can use the gzip compression format directly, so it won't always be necessary to decompress the data entirely to work with it. For example, the `pandas` Python library can read `gzip` compressed files directly. Keeping the files compressed saves space for storing files and improves performance in some situations since less I/O is required to process each file. 
 
 #### A note on OCR quality 
 
@@ -150,7 +150,6 @@ The processing takes place in a series of notebooks:
 - [00_download_process_alto.ipynb]() covers the process of downloading and parsing text and some metadata from the ALTO XML files and creating the initial JSONL version of the dataset. 
 - [01_metadata_exploration.ipynb]() explores metadata available for these books from the British Library catalogue and identifies metadata fields to add/update in the JSONL dataset
 - [02_update_metadata.ipynb]() does the actual update of the existing metadata and prepares the dataset for upload to the British Library repository. 
-
 
 
 ---
