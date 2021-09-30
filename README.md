@@ -1,6 +1,4 @@
-# British Library Books: ALTO to JSONL + metadata processing notebooks
-
-## What is this repository?
+# Digitised Books c. 1510 - c. 1900 : JSONL (OCR derived text & metadata)
 
 > 49,455 books (and other resources ) were digitised with funding from Microsoft, equating to 65,227 volumes (over 23 million pages), published largely between the 18th and 19th Century. The books cover a wide range of subject areas including philosophy, history, poetry and literature. 
 
@@ -120,7 +118,7 @@ The original format output by the OCR software is ALTO XML. Whilst this format w
 
 The ALTO format can be less suitable for work that seeks to utilise this collection 'at scale,' i.e. work with large proportions or all of this data. Similarly, the data in the ALTO is less suitable for using this collection for data science and Natural Langage Processing work.
 
-The JSON file current available via data.bl are easier to work with but contain much less metadata than the ALTO XML. The processing notebooks here aim to produce a new version of the BL books dataset that compromises the usability and completeness of the data. 
+There is a JSON version of the data currently available via the British Library Research Repository [https://doi.org/10.21250/db14](). This JSON version is easier to work with but contain less metadata than the ALTO XML. The processing notebooks here aim to produce a new version of the BL books dataset that offers compromises the usability and completeness of the data.
 
 In particular, this new dataset aims to make it practical for researchers with relatively limited computational resources to be still able to work with the complete collection of resources. This repository is shared to show the processing steps so others can see the lineage of this new dataset and to allow others to check for errors in the processing steps and/or process the collections differently to match their requirements. 
 
@@ -130,7 +128,3 @@ The processing takes place in a series of notebook:
 - [00_download_process_alto.ipynb]() covers the process of downloading and parsing text and some metadata from the the ALTO XML files and creating the initial JSONL version of the dataset. 
 - [01_metadata_exploration.ipynb]() explores metadata available for these books from the British Library catalogue and identifies metadata fields to add/update in the JSONL dataset
 - [02_update_metadata.ipynb]() does the actual update of the existing metadata and prepares the dataset for upload to the British Library repository. 
-
-
-
-
