@@ -16,7 +16,8 @@ This repository contains two things:
 
 Since you might not be interested in the process of creating the dataset, we start with the data documentation. 
 
-## Data documentation 
+## Dataset documentation 
+
 
 The structure of the data looks like this:
 
@@ -130,7 +131,7 @@ The data contains two fields related to OCR quality: `mean_wc_ocr`, and `std_wc_
 
 ---
 
-# Background information 
+# Background information on dataset construction 
 
 This section contains more background information on how and why this new version of the data was created.
 
