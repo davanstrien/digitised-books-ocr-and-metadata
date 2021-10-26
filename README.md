@@ -129,6 +129,10 @@ The data contains two fields related to OCR quality: `mean_wc_ocr`, and `std_wc_
     - the language (including English) may be different from contemporary languages for which most OCR engines are optimized. 
 - some of the books may include images, tables, or other challenging layouts, which can cause issues for the quality of OCR. 
 
+As might be expected. The quality of OCR varies quite a bit by publication date. This relationship can be viewed in the chart below:
+
+![](figs/orc_quality_over_time.png)
+
 ---
 
 # Background information on dataset construction 
